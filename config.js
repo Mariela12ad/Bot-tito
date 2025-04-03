@@ -10,8 +10,8 @@ import moment from 'moment-timezone';
 global.botnumber = "";
 
 global.owner = [
-  ['573178454976', 'May - Creador', true],
-  ['+573145456409', 'Nuevo propietario', true],
+  ['5215641961070', 'May - Creador', true],
+  ['5219531627349', 'Nuevo propietario', true],
 ];
 
 global.suittag = ['5219993404349'];
