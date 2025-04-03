@@ -20,7 +20,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
     const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
     const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
     const document = doc[Math.floor(Math.random() * doc.length)];
-    const str = `🔮 𝙈𝘼𝙔-𝘽𝙊𝙏 🔮
+    const str = `🔮 MYSTIC BOT 🔮
 
  📌 *Hola,* ${taguser}
 
@@ -33,7 +33,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  💰 •  *MayCoins:* ${money}
  🎟️ •  *Tokens:* ${joincount}
  🎁 •  *Premium:* ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌') || ''} ${readMore}
- 🏖️ •  *Adquiere el bot con:* ㅤㅤㅤㅤㅤㅤ+573239900113
+ 🏖️ •  *Adquiere el bot con:* ㅤㅤㅤㅤㅤㅤ5219531627349
 
   _*< 📜 LISTA DE MENUS 📋 />*_
   
