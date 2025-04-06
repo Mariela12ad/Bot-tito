@@ -1,30 +1,32 @@
-import { watchFile, unwatchFile } from 'fs';
+import {watchFile, unwatchFile} from 'fs';
 import chalk from 'chalk';
-import { fileURLToPath } from 'url';
-import fs from 'fs';
+import {fileURLToPath} from 'url';
+import fs from 'fs'; 
 import cheerio from 'cheerio';
 import fetch from 'node-fetch';
 import axios from 'axios';
 import moment from 'moment-timezone';
 
-global.botnumber = "";
+global.botnumber = ""
+global.confirmCode = ""
 
 global.owner = [
-  ['5215641961070', 'May - Creador', true],
-  ['5219531627349', 'Nuevo propietario', true],
+  ['5215641961070', '👑 Mariela - Creador 👑', true],
+  ['5219531627349', '💫 Mystic - Collaborator 2 💫', true],
 ];
 
 global.suittag = ['5219993404349'];
 global.prems = ['51995386439'];
 
 global.packname = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★';
+global.botname = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★';
 global.author = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★';
+global.dev = '© ⍴᥆ᥕᥱrᥱძ ᑲᥡ ★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★'
 global.wm = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★';
 global.titulowm = '🤖 ＴＨＥ ＭＹＳＴＩＣ － ＢＯＴ 🤖';
 global.titulowm2 = `乂  𝚃 𝙷 𝙴  𝙼 𝚈 𝚂 𝚃 𝙸 𝙲  -  𝙱 𝙾 𝚃  乂`
 global.igfg = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★';
 global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*';
-global.dev = '© ⍴᥆ᥕᥱrᥱძ ᑲᥡ ★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★'
 
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg');
@@ -32,7 +34,10 @@ global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png');
 global.imagen4 = fs.readFileSync('./Menu.png');
 global.imagen5 = fs.readFileSync('./src/+18.jpg');
 global.imagen6 = fs.readFileSync('./Menu3.png');
-global.imagen10 = fs.readFileSync('./camilo.jpg');
+global.imagen7 = fs.readFileSync('./src/menu_pt.png');
+global.imagen8 = fs.readFileSync('./src/menu_fr.png')
+global.imagen9 = fs.readFileSync('./src/menu_en.png')
+global.imagen10 = fs.readFileSync('./src/menu_ru.png')
 
 global.mods = [];
 
@@ -48,11 +53,12 @@ global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', s
 global.wm2 = `${dia} ${fecha}\nThe Mystic - Bot`;
 global.gt = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★';
 global.mysticbot = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★';
+global.channel = 'https://whatsapp.com/channel/0029Vaein6eInlqIsCXpDs3y';
 global.md = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD';
 global.mysticbot = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD';
-global.waitt = '*[ ⏳ ] Cargando...*';
-global.waittt = '*[ ⏳ ] Cargando...*';
-global.waitttt = '*[ ⏳ ] Cargando...*';
+global.waitt = '*_[ ⏳ ] Cargando..._*';
+global.waittt = '*_[ ⏳ ] Cargando..._*';
+global.waitttt = '*_[ ⏳ ] Cargando..._*';
 global.nomorown = '5219993404349';
 global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf'];
 global.cmenut = '❖––––––『';
